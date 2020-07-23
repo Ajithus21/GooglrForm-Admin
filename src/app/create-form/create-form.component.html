@@ -1,0 +1,42 @@
+<div class="row vertical-center">
+   
+    <div class="container w-25">
+        <h3>Fill the Form</h3>
+        <hr>
+        
+        <form [formGroup]='userForm' (submit)='sendData()' >
+            <div class="row">
+                <label for="">Name*:
+                    <input type="text"  formControlName = 'username' class="form-control" >
+                </label>
+            </div>
+            <div class="row">
+                <label for="">Mail-ID*:
+                    <input type="email" formControlName = 'email' class="form-control" >
+                </label>
+            </div>
+            <div class="row">
+                <label for="">Phone No*:
+                    <input type="number" formControlName = 'phone' class="form-control" >
+                </label>
+            </div>
+            <div class="row">
+                <label for="">Age*
+                    <input type="number" formControlName = 'age' class="form-control" >
+                </label>
+            </div>
+            <div class="row ">
+                <div class="col-lg-8">
+                    <input type="submit" class="form-control bg-primary" value="Submit">
+                </div>
+    
+                
+            </div>
+        </form>
+
+        <h5>* means required</h5>
+       
+    </div>
+    
+</div>
+
