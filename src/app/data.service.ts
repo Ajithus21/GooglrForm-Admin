@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 export class DataService {
 	constructor(private httpclient: HttpClient) {}
 	postData(data): Observable<any> {
-		return this.httpclient.post('http://localhost:3000/', data);
+		return this.httpclient.post('https://googleform-aj.herokuapp.com/', data);
 	}
 
 	getData(): Observable<any> {
-		return this.httpclient.get('http://localhost:3000/forms');
+		return this.httpclient.get('https://googleform-aj.herokuapp.com/forms');
 	}
 }
