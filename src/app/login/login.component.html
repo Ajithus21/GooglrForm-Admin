@@ -1,0 +1,34 @@
+<div class="row vertical-center">
+   
+    <div class="container w-25">
+        <h3>Admin's Login</h3>
+        <hr>
+        
+        <form [formGroup]="adminForm"  (submit)="sendData()">
+            <div class="row">
+                <label for="">username:
+                    <input type="text" formControlName = "username" class="form-control" >
+                </label>
+            </div>
+            <div class="row">
+                <label for="">Password:
+                    <input type="password"  formControlName = "password" class="form-control" >
+                </label>
+            </div>
+            
+            <div class="row ">
+                <div class="col-lg-8">
+                    <input type="submit" class="form-control bg-primary" value="Login">
+                </div>
+    
+                
+            </div>
+        </form>
+
+       {{adminForm.valid}}
+       
+    </div>
+    
+</div>
+
+

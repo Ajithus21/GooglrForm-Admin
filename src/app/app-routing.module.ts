@@ -3,10 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CreateFormComponent } from './create-form/create-form.component';
 import { NextpageComponent } from './nextpage/nextpage.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 	{
-		path: '',
+		path: 'home',
 		component: HomeComponent
 	},
 	{
@@ -16,6 +17,10 @@ const routes: Routes = [
 	{
 		path: 'submitted',
 		component: NextpageComponent
+	},
+	{
+		path: '',
+		component: LoginComponent
 	}
 ];
 

@@ -9,9 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NextpageComponent } from './nextpage/nextpage.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-	declarations: [ AppComponent, HomeComponent, CreateFormComponent, NavbarComponent, NextpageComponent ],
+	declarations: [ AppComponent, HomeComponent, CreateFormComponent, NavbarComponent, NextpageComponent, LoginComponent ],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule ],
 	providers: [],
 	bootstrap: [ AppComponent ]

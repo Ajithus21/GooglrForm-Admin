@@ -14,4 +14,7 @@ export class DataService {
 	getData(): Observable<any> {
 		return this.httpclient.get('https://googleform-aj.herokuapp.com/forms');
 	}
+	adminLogin(data): Observable<any> {
+		return this.httpclient.post('https://googleform-aj.herokuapp.com/login', data);
+	}
 }
