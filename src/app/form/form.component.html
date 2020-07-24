@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="row vertical-center mt-4">
+   
+    <div class="container">
+        <h3 class='text-center'>Create Form</h3>
+        <hr class="bg-primary">
+        
+        <form [formGroup]='adminForm' (submit)='sendForm()' >
+            <div class="form-group">
+                <label for="formGroupExampleInput">Form Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" formControlName="formname" placeholder="Example input">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Form URL link</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" formControlName="urlLink" placeholder="Another input">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Discription</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="discription" placeholder="Abot the form "  rows="3"></textarea>
+              </div>
+           
+            <div class="form-group">
+               
+                <input type="submit" class="form-control bg-primary text-light" value="Create">
+                
+    
+                
+            </div>
+        </form>
+        {{adminForm.valid}}
+
+        
+       
+    </div>
+   
+    
+</div>
+

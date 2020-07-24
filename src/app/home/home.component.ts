@@ -8,25 +8,16 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 	myData;
-	constructor(private dataservice: DataService) {
-		// this.dataservice.getData().subscribe((data) => {
-		// 	this.myData = data;
-		// 	console.log(this.myData);
-		// });
-	}
+	myDate;
+	constructor(private dataservice: DataService) {}
 
 	ngOnInit(): void {
-		this.dataservice.getData().subscribe((data) => {
+		this.dataservice.getForm().subscribe((data) => {
+			this.myDate = Date.now();
 			this.myData = data;
 			console.log(this.myData);
 		});
 	}
 
-	// ngOnChanges(changes: SimpleChanges) : void {
-	// 	// changes.prop contains the old and the new value...
-	// 	this.dataservice.getData().subscribe((data) => {
-	// 		this.myData = data;
-	// 		console.log(this.myData);
-	// 	});
 	// }
 }

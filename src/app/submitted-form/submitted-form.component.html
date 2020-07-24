@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<!-- <div class="bg-light"> -->
+    <h2 class="text-dark text-center  mt-2 mb-2">Submitted Form list </h2>
+    <hr class="bg-dark">
+    <div class="row" >
+    
+        <div *ngFor="let data of formData"  class="card text-white bg-success mb-3 m-3" style="max-width: 18rem;">
+            <div class="card-header">Name: {{data.username}}</div>
+            <div class="card-body">
+            <h6 class="card-title">MailID: {{data.email}}</h6>
+            <p class="card-text">phoneNo: {{data.phone}}</p>
+            <p class="card-text">Age: {{data.age}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div *ngIf = "myData" class="text-center">
+        <app-pagination [items]="myData" (changePage)="onChangePage($event)"></app-pagination>
+    </div> -->
+    
+<!-- </div> -->
+

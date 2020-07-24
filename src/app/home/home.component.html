@@ -1,20 +1,22 @@
 <app-navbar></app-navbar>
 <!-- <div class="bg-light"> -->
-    <h2 class="text-dark text-center  mt-2 mb-2">Submitted Form list </h2>
-    <hr class="bg-dark">
-    <div class="row" >
+    <h2 class="text-dark text-center  mt-4 mb-4">Created Form list </h2>
+    <hr class="bg-dark  mt-4 mb-4">
+    <div class="container" >
     
-        <div *ngFor="let data of myData"  class="card text-white bg-success mb-3 m-3" style="max-width: 18rem;">
-            <div class="card-header">Name: {{data.username}}</div>
-            <div class="card-body">
-            <h6 class="card-title">MailID: {{data.email}}</h6>
-            <p class="card-text">phoneNo: {{data.phone}}</p>
-            <p class="card-text">Age: {{data.age}}</p>
+        <div *ngFor="let data of myData " class="card mt-4 mb-4 w-60">
+            <div class="card-header ">
+              Admin Form
             </div>
-        </div>
+            <div class="card-body">
+              <h5 class="card-title">{{data.formname}}</h5>
+              <p class="card-text"> <a href="https://googlefom-aj.netlify.app/">{{data.urlLink}}</a></p>
+              <p class="card-text">{{data.discription}}</p>
+              <p class="card-text">Posted Date : {{myDate | date: 'fullDate' }}</p>
+              <a routerLink='/submittedform' class="btn btn-primary">Form List</a>
+            </div>
+            <a href=""></a>
+          </div>
     </div>
-    <!-- <div *ngIf = "myData" class="text-center">
-        <app-pagination [items]="myData" (changePage)="onChangePage($event)"></app-pagination>
-    </div> -->
-    
+   
 <!-- </div> -->
